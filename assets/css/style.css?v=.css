@@ -170,7 +170,7 @@ ul.link li + li { margin-top: 6px; }
 
 ul.link:last-child { margin-bottom: 6px; }
 
-.wrapper { width: 860px; margin: 0 auto; }
+.wrapper { width: 860px; margin: 0 auto; padding-top: 40px; }
 
 blockquote { border-left: 1px solid var(--clr-splitter-blockquote-and-section); margin: 0; padding: 0 0 0 20px; font-style: italic; }
 
@@ -236,8 +236,6 @@ footer { display: none; }
 
 .popup .content { padding-right: 20px; max-height: 30%; overflow: auto; font: 15px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-@media screen and (max-width: 700px) { .box { width: 70%; } .popup { width: 70%; } }
-
 .profile-pic {
   border-radius: 50%;
   width: 150px; /* adjust as needed */
@@ -278,9 +276,39 @@ nav.topnav ul li a.active {
   text-decoration: underline;
 }
 
+/* Responsive for phones */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 120px;
+  }
 
-/* Push page content down so it doesn't hide behind the nav */
-.wrapper {
-  margin-top: 20px;
+  .sidebar {
+    width: 100%;
+    align-items: left;
+    margin-bottom: 20px;
+  }
+
+  .img-circle {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+
+  nav.topnav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .sidebar-footer {
+    text-align: left;
+  }
 }
-/*# sourceMappingURL=style.css.map */
