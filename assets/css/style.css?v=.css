@@ -244,7 +244,7 @@ footer { display: none; }
 }
 nav.topnav {
   background-color: white;
-  padding: 15px 0px;
+  padding: 5px 0px;
   border-bottom: 1px solid #ddd;
   position: fixed;
   top: 0;
